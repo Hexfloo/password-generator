@@ -1,0 +1,11 @@
+{
+    "name": "Password Generator",
+    "version": "1.0.0",
+    "description": "Generate unique and secure passwords",
+    "manifest_version": 3,
+    "author": "Shoham Palmer",
+    "action": {
+        "default_popup": "index.html",
+        "default_title": "Password Generator"
+    }
+}

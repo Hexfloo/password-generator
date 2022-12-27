@@ -1,0 +1,248 @@
+:root {
+    --main-color: #ff5656;
+    --secondary-color: #fa4c4c;
+}
+
+body {
+    color: white;
+    font-family: 'Roboto', sans-serif;
+    height: fit-content;
+    margin: 0;
+    height: fit-content;
+    width: fit-content;
+
+}
+
+.main-container {
+    background: rgb(68, 0, 82);
+    background: radial-gradient(circle, rgba(68, 0, 82, 1) 39%, rgba(255, 86, 86, 1) 100%);
+
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    width: 400px;
+}
+
+.password-container {
+    background-color: var(--main-color);
+    width: 90%;
+    padding: 0.5rem 1rem;
+    border: 0px solid white;
+    border-radius: 16px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+}
+
+form {
+    width: fit-content;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin: 1rem;
+    padding: 1rem;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(9.9px);
+    -webkit-backdrop-filter: blur(9.9px);
+    color: white;
+}
+
+form>div {
+    margin: 0.5rem 0;
+}
+
+form label {
+    display: inline;
+    font-weight: 400;
+    font-size: larger;
+}
+
+.input-container {
+    padding: 0.5rem;
+    margin: 5px;
+    width: fit-content;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(9.9px);
+    -webkit-backdrop-filter: blur(9.9px);
+
+}
+
+input[type="checkbox"]:checked+label {
+    border: 2px solid white;
+    margin: 3px;
+    background: rgba(253, 50, 50, 0.1);
+
+}
+
+.input-container:hover {
+    background: rgba(255, 75, 75, 0.1);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(9.9px);
+    -webkit-backdrop-filter: blur(9.9px);
+
+}
+
+.number-input {
+    width: 2rem;
+    height: fit-content;
+    border-radius: 16px;
+    border: 1px solid white;
+}
+
+#passwordLengthRange {
+    width: 80px;
+    margin: 0 10px;
+}
+
+button {
+    background-color: var(--main-color);
+    color: white;
+    letter-spacing: 0.5px;
+    border: 0px solid white;
+    cursor: pointer;
+    padding: 1rem;
+    border-radius: 16px;
+}
+
+button:hover {
+    background-color: var(--secondary-color);
+
+}
+
+#copyButton {
+    height: fit-content;
+    width: fit-content;
+    padding: 0.5rem;
+    margin: 0;
+    margin-left: 0.5rem;
+    border: 0px solid white;
+}
+
+#submitButton {
+    margin: 1rem auto;
+    width: fit-content;
+}
+
+button>h3 {
+    margin: 0;
+    padding: 0;
+    font-weight: 700;
+    font-size: larger;
+}
+
+#includeUpper,
+#includeNumbers,
+#includeSpecialChars {
+    display: none;
+}
+
+
+
+/* RANGE INPUT COSTUMIZATION */
+input[type=range] {
+    width: 100%;
+    margin: 4.05px 0;
+    background-color: transparent;
+    appearance: none;
+}
+
+input[type=range]:focus {
+    outline: none;
+}
+
+input[type=range]::-webkit-slider-runnable-track {
+    background: #ff5656;
+    border: 0.2px solid rgba(0, 0, 0, 0);
+    border-radius: 8.3px;
+    width: 100%;
+    height: 7.9px;
+    cursor: pointer;
+}
+
+input[type=range]::-webkit-slider-thumb {
+    margin-top: -4.25px;
+    width: 16px;
+    height: 16px;
+    background: #ffffff;
+    border: 1px solid #000000;
+    border-radius: 13px;
+    cursor: pointer;
+    -webkit-appearance: none;
+}
+
+input[type=range]:focus::-webkit-slider-runnable-track {
+    background: #ff7070;
+}
+
+input[type=range]::-moz-range-track {
+    background: #ff5656;
+    border: 0.2px solid rgba(0, 0, 0, 0);
+    border-radius: 8.3px;
+    width: 100%;
+    height: 7.9px;
+    cursor: pointer;
+}
+
+input[type=range]::-moz-range-thumb {
+    width: 16px;
+    height: 16px;
+    background: #ffffff;
+    border: 1px solid #000000;
+    border-radius: 13px;
+    cursor: pointer;
+}
+
+input[type=range]::-ms-track {
+    background: transparent;
+    border-color: transparent;
+    border-width: 5.05px 0;
+    color: transparent;
+    width: 100%;
+    height: 7.9px;
+    cursor: pointer;
+}
+
+input[type=range]::-ms-fill-lower {
+    background: #ff3d3d;
+    border: 0.2px solid rgba(0, 0, 0, 0);
+    border-radius: 16.6px;
+}
+
+input[type=range]::-ms-fill-upper {
+    background: #ff5656;
+    border: 0.2px solid rgba(0, 0, 0, 0);
+    border-radius: 16.6px;
+}
+
+input[type=range]::-ms-thumb {
+    width: 16px;
+    height: 16px;
+    background: #ffffff;
+    border: 1px solid #000000;
+    border-radius: 13px;
+    cursor: pointer;
+    margin-top: 0px;
+    /*Needed to keep the Edge thumb centred*/
+}
+
+input[type=range]:focus::-ms-fill-lower {
+    background: #ff5656;
+}
+
+input[type=range]:focus::-ms-fill-upper {
+    background: #ff7070;
+}
