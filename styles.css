@@ -1,6 +1,10 @@
 :root {
-    --main-color: #ff5656;
-    --secondary-color: #fa4c4c;
+    --main-color: rgb(240, 240, 240);
+    --main-color-light: rgb(255, 255, 255);
+    --secondary-color: rgb(13, 110, 253);
+    --secondary-color-light: rgb(142, 187, 255);
+    --secondary-color-hovered: rgb(0, 95, 237);
+    --secondary-color-faded: rgba(13, 110, 253, 0.2);
 }
 
 body {
@@ -14,8 +18,7 @@ body {
 }
 
 .main-container {
-    background: rgb(68, 0, 82);
-    background: radial-gradient(circle, rgba(68, 0, 82, 1) 39%, rgba(255, 86, 86, 1) 100%);
+    background: #ffffff;
 
     padding: 1rem;
     display: flex;
@@ -27,7 +30,7 @@ body {
 }
 
 .password-container {
-    background-color: var(--main-color);
+    background-color: var(--secondary-color-hovered);
     width: 90%;
     padding: 0.5rem 1rem;
     border: 0px solid white;
@@ -45,12 +48,9 @@ form {
     justify-content: space-around;
     margin: 1rem;
     padding: 1rem;
-    background: rgba(255, 255, 255, 0.1);
+    background: var(--main-color);
     border-radius: 16px;
-    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-    backdrop-filter: blur(9.9px);
-    -webkit-backdrop-filter: blur(9.9px);
-    color: white;
+    color: black;
 }
 
 form>div {
@@ -72,35 +72,30 @@ form label {
     align-items: center;
     flex-direction: row;
 
-    background: rgba(255, 255, 255, 0.1);
+    background: var(--main-color-light);
     border-radius: 16px;
-    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    box-shadow: 1px 1px 8px rgba(0, 0, 0, 0.3);
     backdrop-filter: blur(9.9px);
     -webkit-backdrop-filter: blur(9.9px);
+    transition: background 0.3s;
 
 }
 
 input[type="checkbox"]:checked+label {
-    border: 2px solid white;
+    border: 2px solid var(--secondary-color-light);
     margin: 3px;
-    background: rgba(253, 50, 50, 0.1);
-
 }
 
 .input-container:hover {
-    background: rgba(255, 75, 75, 0.1);
-    border-radius: 16px;
-    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-    backdrop-filter: blur(9.9px);
-    -webkit-backdrop-filter: blur(9.9px);
-
+    background: rgb(240, 240, 240);
 }
 
 .number-input {
     width: 2rem;
     height: fit-content;
     border-radius: 16px;
-    border: 1px solid white;
+    border: 1px solid var(--main-color-light);
+    background: var(--main-color-light);
 }
 
 #passwordLengthRange {
@@ -109,17 +104,18 @@ input[type="checkbox"]:checked+label {
 }
 
 button {
-    background-color: var(--main-color);
+    background: var(--secondary-color);
     color: white;
     letter-spacing: 0.5px;
     border: 0px solid white;
     cursor: pointer;
     padding: 1rem;
     border-radius: 16px;
+    transition: background 0.3s;
 }
 
 button:hover {
-    background-color: var(--secondary-color);
+    background: var(--secondary-color-hovered);
 
 }
 
@@ -156,7 +152,7 @@ button>h3 {
 input[type=range] {
     width: 100%;
     margin: 4.05px 0;
-    background-color: transparent;
+    background: transparent;
     appearance: none;
 }
 
@@ -165,7 +161,7 @@ input[type=range]:focus {
 }
 
 input[type=range]::-webkit-slider-runnable-track {
-    background: #ff5656;
+    background: var(--secondary-color);
     border: 0.2px solid rgba(0, 0, 0, 0);
     border-radius: 8.3px;
     width: 100%;
@@ -185,11 +181,11 @@ input[type=range]::-webkit-slider-thumb {
 }
 
 input[type=range]:focus::-webkit-slider-runnable-track {
-    background: #ff7070;
+    background: var(--secondary-color-hovered);
 }
 
 input[type=range]::-moz-range-track {
-    background: #ff5656;
+    background: var(--secondary-color);
     border: 0.2px solid rgba(0, 0, 0, 0);
     border-radius: 8.3px;
     width: 100%;
@@ -217,13 +213,13 @@ input[type=range]::-ms-track {
 }
 
 input[type=range]::-ms-fill-lower {
-    background: #ff3d3d;
+    background: var(--secondary-color);
     border: 0.2px solid rgba(0, 0, 0, 0);
     border-radius: 16.6px;
 }
 
 input[type=range]::-ms-fill-upper {
-    background: #ff5656;
+    background: var(--secondary-color);
     border: 0.2px solid rgba(0, 0, 0, 0);
     border-radius: 16.6px;
 }
@@ -240,9 +236,9 @@ input[type=range]::-ms-thumb {
 }
 
 input[type=range]:focus::-ms-fill-lower {
-    background: #ff5656;
+    background: var(--secondary-color);
 }
 
 input[type=range]:focus::-ms-fill-upper {
-    background: #ff7070;
+    background: var(--secondary-color);
 }
